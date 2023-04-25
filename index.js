@@ -7,7 +7,7 @@ const randColor = randomColor({
   luminosity: `${process.argv[3]}`,
   hue: `${process.argv[2]}`,
 });
-
+console.log(process.argv);
 // console.log(randColor, `${process.argv[2]}`, `${process.argv[3]}`);
 // console.log(chalk.hex(`${randColor}`)(`${randColor} one more random color`));
 
