@@ -13,5 +13,13 @@
   "devDependencies": {
     "eslint-config-upleveled": "^4.1.8",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "colortranslator": "^1.10.2",
+    "generate-random-color": "^1.0.6",
+    "npm": "^9.6.5",
+    "random-colorful": "^1.0.4",
+    "randomcolor": "^0.6.2"
   }
 }
