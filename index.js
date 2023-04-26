@@ -1,18 +1,19 @@
 import chalk from 'chalk';
-import { ColorTranslator, Harmony, Mix } from 'colortranslator';
 import generateRandomColor from 'generate-random-color';
 import randomColor from 'randomcolor';
 
-const randColor = randomColor({
-  luminosity: `${process.argv[3]}`,
-  hue: `${process.argv[2]}`,
+// import { ColorTranslator, Harmony, Mix } from 'colortranslator';
+
+const userGivenNumber = randomColor({
+  luminosity: process.argv[3],
+  hue: process.argv[2],
 });
-console.log(process.argv);
+
+const randomHexColor = generateRandomColor.hex(); // random color if no color given
+//
 // console.log(randColor, `${process.argv[2]}`, `${process.argv[3]}`);
 // console.log(chalk.hex(`${randColor}`)(`${randColor} one more random color`));
 
-const randomHexColor = generateRandomColor.hex();
-//
 // const color = new ColorTranslator(`${randomHexColor}`);
 // const hslColor = color.HSL;
 // console.log(hslColor);
@@ -25,15 +26,15 @@ const randomHexColor = generateRandomColor.hex();
 
 //
 //
-if (process.argv[2] in chalk) {
+if (process.argv[2]) {
   console.log(
-    chalk.hex(`${randColor}`)(`
+    chalk.hex(userGivenNumber)(`
 
   # ###############################
   # ###############################
   # ###############################
   # #####                     #####
-  # #####        ${randColor}      #####
+  # #####        ${userGivenNumber}      #####
   # #####                     #####
   # ###############################
   # ###############################
@@ -43,7 +44,7 @@ if (process.argv[2] in chalk) {
   );
 } else {
   console.log(
-    chalk.hex(`${randomHexColor}`)(`
+    chalk.hex(randomHexColor)(`
   # ###############################
   # ###############################
   # ###############################
