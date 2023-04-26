@@ -10,22 +10,23 @@ const userGivenNumber = randomColor({
 });
 
 const randomHexColor = generateRandomColor.hex(); // random color if no color given
-//
-// console.log(randColor, `${process.argv[2]}`, `${process.argv[3]}`);
-// console.log(chalk.hex(`${randColor}`)(`${randColor} one more random color`));
+/*
 
-// const color = new ColorTranslator(`${randomHexColor}`);
-// const hslColor = color.HSL;
-// console.log(hslColor);
+console.log(randColor, `${process.argv[2]}`, `${process.argv[3]}`);
+console.log(chalk.hex(`${randColor}`)(`${randColor} one more random color`));
 
-// console.log(process.argv[2]);
-// const hex = new ColorTranslator(`${generateRandomColor}`);
-// console.log(hex);
+const color = new ColorTranslator(`${randomHexColor}`);
+const hslColor = color.HSL;
+console.log(hslColor);
 
-// console.log(chalk.hex(`${randomHexColor}`)(`${randomHexColor}`));
+console.log(process.argv[2]);
+const hex = new ColorTranslator(`${generateRandomColor}`);
+console.log(hex);
 
-//
-//
+console.log(chalk.hex(`${randomHexColor}`)(`${randomHexColor}`));
+
+*/
+
 if (process.argv[2]) {
   console.log(
     chalk.hex(userGivenNumber)(`
